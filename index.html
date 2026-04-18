@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ELLIE's Portfolio</title>
+  <title>Your Name — Developer & Creator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -23,7 +23,6 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -34,7 +33,6 @@
       overflow-x: hidden;
     }
 
-    /* ── Texture overlay ── */
     body::before {
       content: '';
       position: fixed;
@@ -47,15 +45,13 @@
     /* ── Nav ── */
     nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1.25rem 3rem;
-      background: rgba(250, 246, 240, 0.85);
+      background: rgba(250, 246, 240, 0.88);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--sand);
     }
@@ -65,21 +61,16 @@
       font-size: 1.2rem;
       color: var(--ink);
       text-decoration: none;
-      letter-spacing: 0.01em;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
 
     .nav-links a {
       text-decoration: none;
       color: var(--ink-soft);
-      font-size: 0.875rem;
+      font-size: 0.8rem;
       font-weight: 400;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       transition: color 0.2s;
     }
@@ -125,14 +116,10 @@
       font-size: clamp(2.8rem, 5vw, 4.5rem);
       line-height: 1.1;
       font-weight: 600;
-      color: var(--ink);
       margin-bottom: 1.5rem;
     }
 
-    h1 em {
-      font-style: italic;
-      color: var(--terracotta);
-    }
+    h1 em { font-style: italic; color: var(--terracotta); }
 
     .hero-desc {
       font-size: 1.05rem;
@@ -142,11 +129,7 @@
       margin-bottom: 2.5rem;
     }
 
-    .hero-ctas {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     .btn-primary {
       background: var(--terracotta);
@@ -160,10 +143,7 @@
       display: inline-block;
     }
 
-    .btn-primary:hover {
-      background: var(--terracotta-light);
-      transform: translateY(-2px);
-    }
+    .btn-primary:hover { background: var(--terracotta-light); transform: translateY(-2px); }
 
     .btn-secondary {
       border: 1.5px solid var(--sand-dark);
@@ -177,13 +157,8 @@
       display: inline-block;
     }
 
-    .btn-secondary:hover {
-      border-color: var(--ink-soft);
-      color: var(--ink);
-      transform: translateY(-2px);
-    }
+    .btn-secondary:hover { border-color: var(--ink-soft); color: var(--ink); transform: translateY(-2px); }
 
-    /* Hero illustration / decorative side */
     .hero-visual {
       position: relative;
       display: flex;
@@ -193,14 +168,12 @@
     }
 
     .avatar-ring {
-      width: 360px;
-      height: 360px;
+      width: 360px; height: 360px;
       border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
       background: linear-gradient(135deg, var(--sand) 0%, var(--terracotta-light) 60%, var(--amber) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
       animation: morphBlob 8s ease-in-out infinite;
     }
 
@@ -211,8 +184,7 @@
     }
 
     .avatar-inner {
-      width: 280px;
-      height: 280px;
+      width: 280px; height: 280px;
       border-radius: 50%;
       background: var(--cream);
       display: flex;
@@ -233,9 +205,6 @@
       font-weight: 500;
       color: var(--ink);
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
       white-space: nowrap;
     }
 
@@ -248,7 +217,7 @@
       50%       { transform: translateY(-8px); }
     }
 
-    /* ── Section base ── */
+    /* ── Shared section ── */
     section {
       padding: 6rem 3rem;
       max-width: 1200px;
@@ -279,7 +248,24 @@
       font-family: 'Lora', serif;
       font-size: clamp(2rem, 3.5vw, 3rem);
       line-height: 1.2;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .divider {
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--sand-dark), transparent);
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     /* ── About ── */
@@ -294,8 +280,6 @@
     }
 
     .about-sticky { position: sticky; top: 7rem; }
-
-    .about-label-block .section-label { margin-bottom: 1.5rem; }
 
     .about-name {
       font-family: 'Lora', serif;
@@ -313,12 +297,7 @@
       margin-bottom: 2rem;
     }
 
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 2rem;
-    }
+    .skills-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem; }
 
     .skill-chip {
       background: var(--sand);
@@ -326,11 +305,7 @@
       padding: 0.35rem 0.9rem;
       border-radius: 20px;
       font-size: 0.8rem;
-      font-weight: 400;
-      transition: background 0.2s;
     }
-
-    .skill-chip:hover { background: var(--sand-dark); }
 
     .about-content p {
       font-size: 1.05rem;
@@ -339,16 +314,9 @@
       margin-bottom: 1.5rem;
     }
 
-    .about-content p strong {
-      color: var(--ink);
-      font-weight: 500;
-    }
+    .about-content p strong { color: var(--ink); font-weight: 500; }
 
-    .about-links {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
+    .about-links { display: flex; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
 
     .about-link {
       display: flex;
@@ -363,27 +331,189 @@
 
     .about-link:hover { color: var(--moss-light); }
 
-    /* ── Divider ── */
-    .divider {
-      border: none;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--sand-dark), transparent);
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* ── Projects ── */
-    #projects { padding-top: 5rem; }
-
-    .projects-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
+    /* ── Photography grid ── */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
     }
 
+    .photo-item:first-child { grid-column: span 2; }
+
+    .photo-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      aspect-ratio: 4/3;
+      background: var(--sand);
+      cursor: pointer;
+    }
+
+    .photo-item:first-child { aspect-ratio: 16/9; }
+
+    .photo-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .photo-item:hover img { transform: scale(1.05); }
+
+    .photo-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--sand);
+      color: var(--ink-soft);
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .photo-placeholder svg { opacity: 0.35; margin-bottom: 0.25rem; }
+
+    .photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(42,33,24,0.65) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.2rem;
+    }
+
+    .photo-item:hover .photo-overlay { opacity: 1; }
+    .photo-caption { color: white; font-size: 0.85rem; }
+
+    /* ── Lightbox ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10,8,6,0.93);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: white;
+      font-size: 1.3rem;
+      width: 2.5rem; height: 2.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .lightbox-close:hover { background: rgba(255,255,255,0.25); }
+
+    /* ── Video grid ── */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .video-card {
+      background: var(--warm-white);
+      border: 1px solid var(--sand);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 50px rgba(42,33,24,0.1);
+    }
+
+    .video-embed {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #1a1410;
+    }
+
+    .video-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.35);
+      gap: 0.75rem;
+      font-size: 0.82rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .play-icon {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      padding-left: 3px;
+    }
+
+    .video-info { padding: 1.25rem 1.5rem; }
+
+    .video-info h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .video-info p {
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+
+    .video-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+    }
+
+    .video-meta span { display: flex; align-items: center; gap: 0.3rem; }
+
+    /* ── Projects ── */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -399,7 +529,7 @@
       color: inherit;
       display: flex;
       flex-direction: column;
-      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
       position: relative;
       overflow: hidden;
     }
@@ -415,19 +545,10 @@
       transition: transform 0.3s;
     }
 
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 60px rgba(42, 33, 24, 0.1);
-      border-color: var(--sand-dark);
-    }
-
+    .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(42,33,24,0.1); }
     .project-card:hover::before { transform: scaleX(1); }
 
-    .project-icon {
-      font-size: 2rem;
-      margin-bottom: 1.2rem;
-      display: block;
-    }
+    .project-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
 
     .project-card h3 {
       font-family: 'Lora', serif;
@@ -436,19 +557,9 @@
       font-weight: 600;
     }
 
-    .project-card p {
-      font-size: 0.9rem;
-      line-height: 1.65;
-      color: var(--ink-soft);
-      flex: 1;
-      margin-bottom: 1.5rem;
-    }
+    .project-card p { font-size: 0.9rem; line-height: 1.65; color: var(--ink-soft); flex: 1; margin-bottom: 1.5rem; }
 
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
     .project-tag {
       font-size: 0.72rem;
@@ -456,15 +567,12 @@
       border-radius: 20px;
       border: 1px solid var(--sand-dark);
       color: var(--ink-soft);
-      font-weight: 400;
     }
 
     .project-arrow {
       position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      width: 2rem;
-      height: 2rem;
+      top: 1.5rem; right: 1.5rem;
+      width: 2rem; height: 2rem;
       background: var(--sand);
       border-radius: 50%;
       display: flex;
@@ -474,17 +582,10 @@
       transition: background 0.2s, transform 0.2s;
     }
 
-    .project-card:hover .project-arrow {
-      background: var(--terracotta);
-      color: white;
-      transform: rotate(45deg);
-    }
+    .project-card:hover .project-arrow { background: var(--terracotta); color: white; transform: rotate(45deg); }
 
     /* ── Contact ── */
-    #contact {
-      text-align: center;
-      padding-bottom: 8rem;
-    }
+    #contact { text-align: center; padding-bottom: 8rem; }
 
     .contact-inner {
       background: linear-gradient(135deg, var(--ink) 0%, #3d2e22 100%);
@@ -513,41 +614,19 @@
       background: radial-gradient(circle, rgba(74,103,65,0.25) 0%, transparent 70%);
     }
 
-    .contact-inner .section-label {
-      color: var(--terracotta-light);
-      justify-content: center;
-    }
-
+    .contact-inner .section-label { color: var(--terracotta-light); justify-content: center; }
     .contact-inner .section-label::before { background: var(--terracotta-light); }
+    .contact-inner h2 { color: white; margin-bottom: 1rem; }
+    .contact-inner p { color: rgba(255,255,255,0.65); font-size: 1.05rem; line-height: 1.7; max-width: 480px; margin: 0 auto 2.5rem; }
 
-    .contact-inner h2 {
-      color: white;
-      margin-bottom: 1rem;
-    }
-
-    .contact-inner p {
-      color: rgba(255,255,255,0.65);
-      font-size: 1.05rem;
-      line-height: 1.7;
-      max-width: 480px;
-      margin: 0 auto 2.5rem;
-    }
-
-    .contact-ctas {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .contact-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
     .btn-light {
-      background: white;
-      color: var(--ink);
+      background: white; color: var(--ink);
       padding: 0.85rem 2rem;
       border-radius: 50px;
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 0.9rem; font-weight: 500;
       transition: opacity 0.2s, transform 0.2s;
       display: inline-block;
     }
@@ -560,19 +639,13 @@
       padding: 0.85rem 2rem;
       border-radius: 50px;
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 400;
+      font-size: 0.9rem; font-weight: 400;
       transition: border-color 0.2s, color 0.2s, transform 0.2s;
       display: inline-block;
     }
 
-    .btn-ghost-light:hover {
-      border-color: white;
-      color: white;
-      transform: translateY(-2px);
-    }
+    .btn-ghost-light:hover { border-color: white; color: white; transform: translateY(-2px); }
 
-    /* ── Footer ── */
     footer {
       text-align: center;
       padding: 2rem;
@@ -593,15 +666,12 @@
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: none;
-    }
+    .fade-in.visible { opacity: 1; transform: none; }
 
     /* ── Responsive ── */
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
-      .nav-links { gap: 1.5rem; }
+      .nav-links { gap: 1.2rem; }
 
       .hero {
         grid-template-columns: 1fr;
@@ -617,26 +687,42 @@
       .avatar-ring { width: 260px; height: 260px; }
       .avatar-inner { width: 200px; height: 200px; font-size: 4.5rem; }
       .tag-2, .tag-3 { display: none; }
-      .tag-1 { bottom: 0; left: 50%; transform: translateX(-50%); }
 
       section { padding: 4rem 1.5rem; }
-
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .about-sticky { position: static; }
 
-      .projects-grid { grid-template-columns: 1fr; }
+      .photo-grid { grid-template-columns: 1fr 1fr; }
+      .photo-item:first-child { grid-column: span 2; }
 
+      .video-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
       .contact-inner { padding: 3.5rem 2rem; }
+    }
+
+    @media (max-width: 560px) {
+      .photo-grid { grid-template-columns: 1fr; }
+      .photo-item:first-child { grid-column: span 1; aspect-ratio: 4/3; }
+      .nav-links { gap: 0.9rem; }
+      .nav-links a { font-size: 0.7rem; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()" />
+  </div>
+
   <!-- Nav -->
   <nav>
-    <a href="#" class="nav-logo">ELLIE.</a>
+    <a href="#" class="nav-logo">YourName</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#photography">Photography</a></li>
+      <li><a href="#video">Video</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -646,10 +732,10 @@
   <div class="hero">
     <div class="hero-text">
       <p class="hero-eyebrow">Hello, I'm</p>
-      <h1>Ellie Curshellas,<br><em>maker of things</em></h1>
-      <p class="hero-desc">I build thoughtful software and bring ideas to life through clean code and intentional design. Based somewhere wonderful, working everywhere.</p>
+      <h1>Your Name,<br><em>maker of things</em></h1>
+      <p class="hero-desc">I build thoughtful software, capture moments through a lens, and bring ideas to life. Developer, photographer, and visual storyteller.</p>
       <div class="hero-ctas">
-        <a href="#projects" class="btn-primary">See My Work</a>
+        <a href="#photography" class="btn-primary">See My Work</a>
         <a href="#contact" class="btn-secondary">Get In Touch</a>
       </div>
     </div>
@@ -658,9 +744,9 @@
       <div class="avatar-ring">
         <div class="avatar-inner">✦</div>
       </div>
-      <div class="floating-tag tag-1">💻 Open to work</div>
-      <div class="floating-tag tag-2">🌱 Always learning</div>
-      <div class="floating-tag tag-3">✨ Let's build!</div>
+      <div class="floating-tag tag-1">📷 Visual storyteller</div>
+      <div class="floating-tag tag-2">🎬 Video creator</div>
+      <div class="floating-tag tag-3">💻 Developer</div>
     </div>
   </div>
 
@@ -669,38 +755,32 @@
   <!-- About -->
   <section id="about">
     <div class="about-grid">
-      <div class="about-sticky about-label-block fade-in">
+      <div class="about-sticky fade-in">
         <p class="section-label">About me</p>
         <div class="about-name">Your<br>Name</div>
-        <div class="about-title">Developer & Creator</div>
+        <div class="about-title">Developer & Visual Creator</div>
         <div class="skills-list">
           <span class="skill-chip">JavaScript</span>
           <span class="skill-chip">Python</span>
           <span class="skill-chip">React</span>
-          <span class="skill-chip">Node.js</span>
-          <span class="skill-chip">CSS</span>
-          <span class="skill-chip">Git</span>
-          <span class="skill-chip">SQL</span>
+          <span class="skill-chip">Photography</span>
+          <span class="skill-chip">Video</span>
+          <span class="skill-chip">Lightroom</span>
+          <span class="skill-chip">Premiere</span>
           <span class="skill-chip">Design</span>
         </div>
       </div>
 
       <div class="about-content fade-in">
-        <p>
-          Hi! I'm a <strong>developer with a love for craft</strong> — whether that's writing elegant code, designing intuitive interfaces, or solving tricky problems in creative ways.
-        </p>
-        <p>
-          I started building things on the internet because I couldn't stop having ideas. Over the years I've worked on everything from side projects that never shipped to tools people actually use every day. I believe <strong>the best software feels like it just gets it</strong>.
-        </p>
-        <p>
-          When I'm not at a keyboard, you'll find me outside, reading, or making something with my hands. I think the best developers are also curious humans.
-        </p>
+        <p>Hi! I'm a <strong>developer and visual creator</strong> with a love for craft — whether that's writing elegant code, framing the perfect shot, or editing a film that moves people.</p>
+        <p>I started building things on the internet because I couldn't stop having ideas. My photography and videography work runs alongside my dev life — both are about <strong>seeing the world carefully and communicating something true</strong>.</p>
+        <p>When I'm not at a keyboard you'll find me outside with a camera, or making something with my hands.</p>
         <div class="about-links">
-          <a href="https://github.com/mikeistired" class="about-link" target="_blank">
+          <a href="https://github.com/yourusername" class="about-link" target="_blank">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
             GitHub
           </a>
-          <a href="mailto:mc136@illinois.edu" class="about-link">
+          <a href="mailto:you@example.com" class="about-link">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
             Email Me
           </a>
@@ -715,14 +795,216 @@
 
   <hr class="divider" />
 
+  <!-- ═══════════════════════════════════════
+       PHOTOGRAPHY SECTION
+       ═══════════════════════════════════════
+       HOW TO ADD YOUR PHOTOS:
+       1. Create an "images" folder in your GitHub repo
+       2. Upload your photos there (e.g. photo1.jpg, photo2.jpg...)
+       3. In each .photo-item below, set the <img src=""> to your file path
+          Example: src="images/photo1.jpg"
+       4. Update the data-caption and alt text for each photo
+       5. Clicking a photo opens it in a fullscreen lightbox automatically
+  -->
+  <section id="photography">
+    <div class="section-header fade-in">
+      <div>
+        <p class="section-label">Lens work</p>
+        <h2>Photography</h2>
+        <p style="color:var(--ink-soft);font-size:0.95rem;margin-top:0.5rem;max-width:500px;line-height:1.7;">A selection of moments captured in the field. Click any image to view full size.</p>
+      </div>
+    </div>
+
+    <div class="photo-grid fade-in">
+
+      <!-- Photo 1 — featured (spans 2 columns). Set src="images/yourphoto.jpg" -->
+      <div class="photo-item" onclick="openLightbox(this)">
+        <img src="" alt="Featured photograph" data-caption="Your caption here" />
+        <div class="photo-placeholder">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span style="font-weight:500">Featured photo</span>
+          <code style="font-size:0.72rem;opacity:0.6;font-family:monospace">src="images/photo1.jpg"</code>
+        </div>
+        <div class="photo-overlay"><span class="photo-caption">Your caption here</span></div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="photo-item" onclick="openLightbox(this)">
+        <img src="" alt="Photo 2" data-caption="Your caption here" />
+        <div class="photo-placeholder">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <code style="font-size:0.72rem;opacity:0.6;font-family:monospace">src="images/photo2.jpg"</code>
+        </div>
+        <div class="photo-overlay"><span class="photo-caption">Your caption here</span></div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="photo-item" onclick="openLightbox(this)">
+        <img src="" alt="Photo 3" data-caption="Your caption here" />
+        <div class="photo-placeholder">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <code style="font-size:0.72rem;opacity:0.6;font-family:monospace">src="images/photo3.jpg"</code>
+        </div>
+        <div class="photo-overlay"><span class="photo-caption">Your caption here</span></div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="photo-item" onclick="openLightbox(this)">
+        <img src="" alt="Photo 4" data-caption="Your caption here" />
+        <div class="photo-placeholder">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <code style="font-size:0.72rem;opacity:0.6;font-family:monospace">src="images/photo4.jpg"</code>
+        </div>
+        <div class="photo-overlay"><span class="photo-caption">Your caption here</span></div>
+      </div>
+
+      <!-- Photo 5 -->
+      <div class="photo-item" onclick="openLightbox(this)">
+        <img src="" alt="Photo 5" data-caption="Your caption here" />
+        <div class="photo-placeholder">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <code style="font-size:0.72rem;opacity:0.6;font-family:monospace">src="images/photo5.jpg"</code>
+        </div>
+        <div class="photo-overlay"><span class="photo-caption">Your caption here</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ═══════════════════════════════════════
+       VIDEO SECTION
+       ═══════════════════════════════════════
+       HOW TO EMBED YOUR VIDEOS:
+
+       YouTube:
+         1. Go to your video on YouTube
+         2. Click Share → Embed
+         3. Copy the URL from the src="..." inside the <iframe> code
+            It looks like: https://www.youtube.com/embed/ABC123xyz
+         4. Paste it into the iframe src below and uncomment the line
+
+       Vimeo:
+         1. Go to your video on Vimeo
+         2. Click Share → Embed
+         3. Copy the URL: https://player.vimeo.com/video/123456789
+         4. Paste it into the iframe src below and uncomment the line
+  -->
+  <section id="video">
+    <div class="section-header fade-in">
+      <div>
+        <p class="section-label">Motion work</p>
+        <h2>Video</h2>
+        <p style="color:var(--ink-soft);font-size:0.95rem;margin-top:0.5rem;max-width:500px;line-height:1.7;">Films, edits, and motion work. Paste your YouTube or Vimeo embed URL into each card.</p>
+      </div>
+    </div>
+
+    <div class="video-grid fade-in">
+
+      <!-- Video 1 -->
+      <div class="video-card">
+        <div class="video-embed">
+          <!-- Uncomment ONE of these lines and replace with your embed URL:      -->
+          <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+          <!-- <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+          <div class="video-placeholder">
+            <div class="play-icon">▶</div>
+            <span>Paste YouTube or Vimeo embed URL</span>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3>Video Title</h3>
+          <p>A short description — what's this film about, where was it shot?</p>
+          <div class="video-meta">
+            <span>
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              2:45
+            </span>
+            <span>2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card">
+        <div class="video-embed">
+          <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+          <div class="video-placeholder">
+            <div class="play-icon">▶</div>
+            <span>Paste YouTube or Vimeo embed URL</span>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3>Video Title</h3>
+          <p>A short description — what's this film about, where was it shot?</p>
+          <div class="video-meta">
+            <span>
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              4:12
+            </span>
+            <span>2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-card">
+        <div class="video-embed">
+          <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+          <div class="video-placeholder">
+            <div class="play-icon">▶</div>
+            <span>Paste YouTube or Vimeo embed URL</span>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3>Video Title</h3>
+          <p>A short description — what's this film about, where was it shot?</p>
+          <div class="video-meta">
+            <span>
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              1:30
+            </span>
+            <span>2023</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="video-card">
+        <div class="video-embed">
+          <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+          <div class="video-placeholder">
+            <div class="play-icon">▶</div>
+            <span>Paste YouTube or Vimeo embed URL</span>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3>Video Title</h3>
+          <p>A short description — what's this film about, where was it shot?</p>
+          <div class="video-meta">
+            <span>
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              3:20
+            </span>
+            <span>2023</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
   <!-- Projects -->
   <section id="projects">
-    <div class="projects-header fade-in">
+    <div class="section-header fade-in">
       <div>
-        <p class="section-label">Work</p>
-        <h2>Selected Projects</h2>
+        <p class="section-label">Code work</p>
+        <h2>Projects</h2>
       </div>
-      <a href="https://github.com/mikeistired" class="btn-secondary" target="_blank">All on GitHub →</a>
+      <a href="https://github.com/yourusername" class="btn-secondary" target="_blank">All on GitHub →</a>
     </div>
 
     <div class="projects-grid">
@@ -769,29 +1051,62 @@
     <div class="contact-inner fade-in">
       <p class="section-label">Say hello</p>
       <h2>Let's Work Together</h2>
-      <p>Whether you have a project in mind, a question, or just want to connect — my inbox is always open.</p>
+      <p>Whether you have a project in mind, a collaboration, or just want to connect — my inbox is always open.</p>
       <div class="contact-ctas">
-        <a href="mailto:mc136@illinois.edu" class="btn-light">Send Me an Email</a>
-        <a href="https://github.com/mikeistired" class="btn-ghost-light" target="_blank">View GitHub</a>
+        <a href="mailto:you@example.com" class="btn-light">Send Me an Email</a>
+        <a href="https://github.com/yourusername" class="btn-ghost-light" target="_blank">View GitHub</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>Built with care · © 2026 Ellie Curshellas</p>
+    <p>Built with care · © 2026 Your Name</p>
   </footer>
 
   <script>
-    // Scroll-triggered fade-ins
+    // Scroll fade-ins
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
           setTimeout(() => entry.target.classList.add('visible'), i * 80);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.08 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Show placeholder if img has no src or fails to load
+    document.querySelectorAll('.photo-item img').forEach(img => {
+      const placeholder = img.nextElementSibling;
+      const checkSrc = () => {
+        const src = img.getAttribute('src');
+        if (!src || src.trim() === '') {
+          img.style.display = 'none';
+          if (placeholder) placeholder.style.display = 'flex';
+        }
+      };
+      img.addEventListener('error', () => {
+        img.style.display = 'none';
+        if (placeholder) placeholder.style.display = 'flex';
+      });
+      checkSrc();
+    });
+
+    // Lightbox
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      if (!img || img.style.display === 'none' || !img.getAttribute('src') || img.getAttribute('src').trim() === '') return;
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
   </script>
 
 </body>
